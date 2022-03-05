@@ -5,19 +5,24 @@ var passwordLength = function () {
   return value;
 }
 
-//generate alert when user clicks on Generate Password button
-function generatePassword (){
-  window.alert("Please select criteria for your secure password through the next few prompts");
-};
-
-//alert asking for the password length
-function passwordCritera (){
-  var promptLength = window.alert("How many characters would you like your password to be? Please select from 8-128.");
-  if (passwordLength === 8)
-    window.alert("Thank you");
-    return passwordCritera();
+//prompt asking for the password length
+var getPasswordLength = function (){
+    var length = window.prompt("How many characters would you like your password to be? Please type a number from 8-128.");
+//   if (passwordLength === 8){
+//   window.alert("Thank you");
+//    console.log("Password Length:");
+//
+  return getPasswordLength();
+//}
+//  else {
+//    window.alert("Please type in a number between 8-128.")
+//    }
 }
 
+//generate alert when user clicks on Generate Password button
+function generatePassword (){
+  window.alert("Please select criteria for your secure password through the next few prompts.");
+};
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
