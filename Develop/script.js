@@ -32,9 +32,12 @@ var lowerLetters = function () {
     window.alert("You selected Yes to lower case letters");
     console.log("You selected Yes.")
   }
-  else {
+  else if (lower == "No" || lower == "no") {
     window.alert("You selected No to lower case letters");
-    console.log("You selected No.")
+    console.log("You selected No.");
+  }
+  else { 
+    window.alert("You selected an invalid response.");
   }
 }
 
