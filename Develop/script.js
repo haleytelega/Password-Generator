@@ -27,7 +27,15 @@ getPasswordLength();
 
 //prompt asking for if they want lowercase letters
 var lowerLetters = function () {
-  var lower = window.prompt("Do you want lower case letters in your password? Please select Yes or No.")
+  var lower = window.prompt("Do you want lower case letters in your password? Please select Yes or No.");
+  if (lower == "Yes" || lower =="yes") {
+    window.alert("You selected Yes to lower case letters");
+    console.log("You selected Yes.")
+  }
+  else {
+    window.alert("You selected No to lower case letters");
+    console.log("You selected No.")
+  }
 }
 
 lowerLetters ();
