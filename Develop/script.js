@@ -12,7 +12,7 @@ generatePassword();
 var getPasswordLength = function (){
     var length = window.prompt("How many characters would you like your password to be? Please type a number from 8-128.");
     if (length >= 8 && length <= 128) {
-    window.alert("Thank you");
+//    window.alert("Thank you");
     console.log("Password Length:" + length);
 
 //    return true;
@@ -25,6 +25,12 @@ var getPasswordLength = function (){
 
 getPasswordLength();
 
+//prompt asking for if they want lowercase letters
+var lowerLetters = function () {
+  var lower = window.prompt("Do you want lower case letters in your password? Please select Yes or No.")
+}
+
+lowerLetters ();
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
