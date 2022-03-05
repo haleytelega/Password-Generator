@@ -1,6 +1,8 @@
 // Assignment code here
+
+//generate alert when user clicks on Generate Password button
 function generatePassword (){
-  window.prompt("Please select criteria for your secure password through the next few prompts");
+  window.alert("Please select criteria for your secure password through the next few prompts");
 };
 
 
