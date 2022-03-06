@@ -1,13 +1,17 @@
 // Assignment code here
 
+var generateBtn = document.querySelector("#generate");
+  generateBtn.onclick = function () {
+  window.alert("Please select criteria for your secure password through the next few prompts.");
+}
+
+//generateBtn.click();
 
 //prompt asking for the password length
 var getPasswordLength = function (){
     var length = window.prompt("How many characters would you like your password to be? Please type a number from 8-128.");
     if (length >= 8 && length <= 128) {
     console.log("Password Length:" + length);
-
-//    return true;
 }
   else {
     window.alert("Please type in a number between 8-128.");
@@ -15,7 +19,7 @@ var getPasswordLength = function (){
     }
 }
 
-getPasswordLength();
+//getPasswordLength();
 
 //prompt asking for if they want lowercase letters
 var lowerLetters = function () {
@@ -32,7 +36,7 @@ var lowerLetters = function () {
   }
 }
 
-lowerLetters ();
+//lowerLetters ();
 
 // prompt for uppercase letters
 var upperLetters = function () {
@@ -48,7 +52,7 @@ var upperLetters = function () {
   }
 }
 
-upperLetters();
+//upperLetters();
 
 var numericValues = function () {
   var numeric = window.prompt("Do you want numbers in your password? Please type yes or no.");
@@ -63,7 +67,7 @@ var numericValues = function () {
   }
 }
 
-numericValues();
+//numericValues();
 
 var specialCharacters = function () {
   var characters = window.prompt("Do you want special characters in your password? Please type in yes or no.");
@@ -78,20 +82,7 @@ var specialCharacters = function () {
   }
 }
 
-specialCharacters();
-
-//function generatePassword (){
-//  window.alert("Please select criteria for your secure password through the next few prompts.");
-//};
-
-// generatePassword();
-
-// Get references to the #generate element
-var generateBtn = document.querySelector("#generate");
-generateBtn.onclick = function () {
-  generateBtn.click();
-  window.alert("Please select criteria for your secure password through the next few prompts.");
-}
+//specialCharacters();
 
 
 // Write password to the #password input
