@@ -1,12 +1,11 @@
 // Assignment code here
 
-//generate alert when user clicks on Generate Password button
+
 function generatePassword (){
   window.alert("Please select criteria for your secure password through the next few prompts.");
 };
 
 generatePassword();
-
 
 //prompt asking for the password length
 var getPasswordLength = function (){
@@ -18,7 +17,7 @@ var getPasswordLength = function (){
 }
   else {
     window.alert("Please type in a number between 8-128.");
-    console.log("Invalid Response. ");
+    console.log("Invalid Response. Please try again.");
     }
 }
 
@@ -35,7 +34,7 @@ var lowerLetters = function () {
   }
 
   else {
-    window.alert("You selected an invalid response.");
+    window.alert("You selected an invalid response. Please try again. ");
   }
 }
 
@@ -43,7 +42,7 @@ lowerLetters ();
 
 // prompt for uppercase letters
 var upperLetters = function () {
-  var upper = window.prompt("Do you want upper case letters in your password? Please type YES or NO.")
+  var upper = window.prompt("Do you want upper case letters in your password? Please type YES or NO.");
   if (upper == 'YES' || upper == "Yes") {
     console.log("You selected: " + upper);
   }
@@ -51,13 +50,31 @@ var upperLetters = function () {
     console.log("You selected: " + upper);
   }
   else {
-    window.alert("You selected an invalid response.");
+    window.alert("You selected an invalid response. Please try again.");
   }
 }
 
 upperLetters();
 
+var numericValues = function () {
+  var numeric = window.prompt("Do you want numbers in your password? Please type yes or no.");
+  if (numeric == 'Yes' || numeric == "yes"){
+    console.log("You selected: " + numeric);
+  }
+  else if (numeric == "No" || numeric == "no"){
+    console.log("You selected: " + numeric);
+  }
+  else {
+    window.alert("You selected an invalid response. Please try again.");
+  }
+}
 
+numericValues();
+
+
+var specialCharacters = function () {
+  var characters 
+}
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
