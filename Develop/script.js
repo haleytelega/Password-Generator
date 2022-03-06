@@ -1,12 +1,6 @@
 // Assignment code here
 
 
-function generatePassword (){
-  window.alert("Please select criteria for your secure password through the next few prompts.");
-};
-
-generatePassword();
-
 //prompt asking for the password length
 var getPasswordLength = function (){
     var length = window.prompt("How many characters would you like your password to be? Please type a number from 8-128.");
@@ -71,24 +65,44 @@ var numericValues = function () {
 
 numericValues();
 
-
 var specialCharacters = function () {
-  var characters 
+  var characters = window.prompt("Do you want special characters in your password? Please type in yes or no.");
+  if (characters == 'Yes' || characters == 'yes'){
+    console.log("You selected: " + characters);
+  }
+  else if (characters == 'No' || characters == 'no'){
+    console.log("You selected: " + characters);
+  }
+  else {
+    window.alert("You selected an invalid response. Please try again.");
+  }
 }
+
+specialCharacters();
+
+//function generatePassword (){
+//  window.alert("Please select criteria for your secure password through the next few prompts.");
+//};
+
+// generatePassword();
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
-
-// Write password to the #password input
-function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
-
-  passwordText.value = password;
-
+generateBtn.onclick = function () {
+  generateBtn.click();
+  window.alert("Please select criteria for your secure password through the next few prompts.");
 }
 
 
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+// Write password to the #password input
+//function writePassword() {
+//  var password = generatePassword();
+//  var passwordText = document.querySelector("#password");
 
+//  passwordText.value = password;
+
+//}
+
+
+// Add event listener to generate button
+//generateBtn.addEventListener("click", writePassword);
