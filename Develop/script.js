@@ -15,7 +15,7 @@ function generatePassword () {
     window.prompt("Do you want lower case letters in your password? Please type Yes or No.");
     console.log("You selected lower.");
   }
-  if (upper == 'Yes' || upper == "yes") {
+  if (upper == 'Yes' || upper == 'yes') {
     window.prompt("Do you want upper case letters in your password? Please type Yes or No.");
     console.log("You selected upper.");
   }
@@ -27,8 +27,8 @@ function generatePassword () {
     window.prompt("Do you want special characters in your password? Please type in yes or no.");
     console.log("You selected characters.");
   }
-  if (length <= 0 && length >= 128 && lower == 'No' || lower == 'no' && upper == 'No' || upper == 'no' || numeric == 'No' || numeric == 'no' && special == 'No' || special == 'no')
-    console.log("User selected no");
+  if (length == null || lower == null || upper == null || numeric == null || special == null)
+  window.prompt("Please type out either Yes or No.");
 }
 
 
