@@ -1,5 +1,5 @@
 // Assignment code here
-var length = '';
+var length;
 var lower = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
 var upper = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
 var numeric = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
@@ -11,14 +11,17 @@ function generatePassword () {
   if (length >= 8 && length <= 128) {
     console.log("Password Length");
   }
-  if (window.confirm("Do you want lower case letters in your password?")) {
+    else {
+    window.alert("Please type out a number from 8-128. Thank you.");
+  }
+  if (window.confirm("Do you want lowercase letters in your password?")) {
       lower == true;
       console.log("You selected lower.");
   }
   else {
     console.log("You selected no.")
   }
-  if (window.confirm("Do you want upper case letters in your password? ")) {
+  if (window.confirm("Do you want uppercase letters in your password? ")) {
     upper == true;
     console.log("You selected upper.");
   }
@@ -38,6 +41,9 @@ function generatePassword () {
   }
   else {
     console.log("You selected no.")
+  }
+  if (lower == false && upper == false && numeric == false && special == false) {
+    window.alert("You must select either lowercase, uppercase, number or special character.");
   }
 }
 
