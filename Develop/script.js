@@ -9,26 +9,28 @@ var special = [" !#$%&'()*+,-./:;<=>?@[\]^_`{|}~"];
 function generatePassword () {
   window.prompt("How many characters would you like your password to be? Please type a number from 8-128.");
   if (length >= 8 && length <= 128) {
-    console.log("Password Length:" + length);
-    }
-  if (lower == 'Yes' || 'yes') {
-    window.prompt("Do you want lower case letters in your password? Please type Yes or No.");
-    console.log("You selected lower.");
+    console.log("Password Length");
   }
-  if (upper == 'Yes' || upper == 'yes') {
-    window.prompt("Do you want upper case letters in your password? Please type Yes or No.");
+  if (window.confirm("Do you want lower case letters in your password?")) {
+      lower == true;
+      console.log("You selected lower.");
+  }
+  if (window.confirm("Do you want upper case letters in your password? ")) {
+    upper == true;
     console.log("You selected upper.");
   }
-  if (numeric == 'Yes' || numeric == "yes"){
-    window.prompt("Do you want numbers in your password? Please type Yes or No.")
+  if (window.confirm("Do you want numbers in your password?")) {
+    numeric == true;
     console.log("You selected numbers.");
   }
-  if (special == 'Yes' || special == 'yes'){
-    window.prompt("Do you want special characters in your password? Please type in yes or no.");
+  if (window.confirm("Do you want special characters in your password?")) {
+    special == true;
     console.log("You selected characters.");
   }
-  if (length == null || lower == null || upper == null || numeric == null || special == null)
-  window.prompt("Please type out either Yes or No.");
+  else {
+    (lower == false || upper == false || numeric == false || special == false);
+    console.log("You selected no.");
+  }
 }
 
 
