@@ -7,13 +7,13 @@ var special = [" !#$%&'()*+,-./:;<=>?@[\]^_`{|}~"];
 
 
 function generatePassword () {
-  window.prompt("How many characters would you like your password to be? Please type a number from 8-128.");
-  if (length >= 8 && length <= 128) {
-    console.log("Password Length");
-  }
-    else {
+  while (length >= 8 || length <= 128) {
+    window.prompt("How many characters would you like your password to be? Please type a number from 8-128.");
+
+  if (length <= 8 || length >= 128) {
     window.alert("Please type out a number from 8-128. Thank you.");
   }
+}
   if (window.confirm("Do you want lowercase letters in your password?")) {
       lower == true;
       console.log("You selected lower.");
