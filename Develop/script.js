@@ -15,21 +15,29 @@ function generatePassword () {
       lower == true;
       console.log("You selected lower.");
   }
+  else {
+    console.log("You selected no.")
+  }
   if (window.confirm("Do you want upper case letters in your password? ")) {
     upper == true;
     console.log("You selected upper.");
   }
+  else {
+    console.log("You selected no.")
+  }
   if (window.confirm("Do you want numbers in your password?")) {
     numeric == true;
     console.log("You selected numbers.");
+  }
+  else {
+    console.log("You selected no.")
   }
   if (window.confirm("Do you want special characters in your password?")) {
     special == true;
     console.log("You selected characters.");
   }
   else {
-    (lower == false || upper == false || numeric == false || special == false);
-    console.log("You selected no.");
+    console.log("You selected no.")
   }
 }
 
