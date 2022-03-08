@@ -19,12 +19,29 @@ function generatePassword () {
   var useSpecial = window.confirm("Do you want special characters in your password?");
 
 
-  var passwordText = '';
-  for(var i = 0; i < lower; ++i){
-   passwordText += lower.charAt(Math.floor(Math.random() * lower.length));
-}
+  var choices = [];
+  var password = [];
 
-
+  if (useLower) {
+  choices.concat(lower)
+  console.log("you selected lower")
+  }
+  if (useUpper){
+    choices.concat(upper)
+    console.log("you selected upper")
+  }
+  if(useNumeric){
+    choices.concat(numeric)
+    console.log("you selected numeric")
+  }
+  if(useSpecial){
+    choices.concat(special)
+    console.log("you selected special")
+  }
+  // for(i = 0; i < lower; ++i) {
+  //   var letter = choices.charAt(Math.floor(Math.random() * choices.length));
+  //   password.push(letter)
+  // }
 
   if (useLower == false && useUpper == false && useNumeric == false && useSpecial == false) {
     window.alert("You must select either lowercase, uppercase, number or special character.");
