@@ -18,10 +18,13 @@ function generatePassword () {
   var useNumeric =  window.confirm("Do you want numbers in your password?");
   var useSpecial = window.confirm("Do you want special characters in your password?");
 
-  var genPassword = "";
-  for(var i = 0; i < 7 ; i++){
-    genPassword += lower.charAt(Math.floor(Math.random() * lower));
-  }
+
+  var passwordText = '';
+  for(var i = 0; i < lower; ++i){
+   passwordText += lower.charAt(Math.floor(Math.random() * lower.length));
+}
+
+
 
   if (useLower == false && useUpper == false && useNumeric == false && useSpecial == false) {
     window.alert("You must select either lowercase, uppercase, number or special character.");
