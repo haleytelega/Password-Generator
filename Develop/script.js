@@ -38,16 +38,18 @@ function generatePassword () {
     choices.concat(special)
     console.log("you selected special")
   }
-  // for(i = 0; i < lower; ++i) {
-  //   var letter = choices.charAt(Math.floor(Math.random() * choices.length));
-  //   password.push(letter)
-  // }
+    var pwd ='';
+    for(i = 0; i < length; i++) {
+     var pwd = choices.charAt(Math.floor(Math.random() * choices.length));
+      password.push(length, lower, upper, numeric, special);
+  }
+  return pwd;
+  }
 
   if (useLower == false && useUpper == false && useNumeric == false && useSpecial == false) {
     window.alert("You must select either lowercase, uppercase, number or special character.");
   generatePassword();
   }
-}
 }
 
 
