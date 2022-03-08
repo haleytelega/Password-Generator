@@ -2,7 +2,7 @@
 var lower = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
 var upper = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
 var numeric = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
-var special = [" !#$%&'()*+,-./:;<=>?@[\]^_`{|}~"];
+var special = ["!", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "[", "]","^", "_" , "`", "{", "|", "}", "~"];
 
 function generatePassword () {
   var length = window.prompt("How many characters would you like your password to be? Please type a number from 8-128.");
@@ -23,25 +23,26 @@ function generatePassword () {
   var password = [];
 
   if (useLower) {
-  choices.concat(lower)
+  choices = choices.concat(lower)
   console.log("you selected lower")
   }
   if (useUpper){
-    choices.concat(upper)
+  choices = choices.concat(upper)
     console.log("you selected upper")
   }
   if(useNumeric){
-    choices.concat(numeric)
+  choices = choices.concat(numeric)
     console.log("you selected numeric")
   }
   if(useSpecial){
-    choices.concat(special)
+  choices = choices.concat(special)
     console.log("you selected special")
   }
+
     var pwd ='';
     for(i = 0; i < length; i++) {
-     var pwd = choices.charAt(Math.floor(Math.random() * choices.length));
-      password.push(length, lower, upper, numeric, special);
+      const random = choices[Math.floor(Math.random() * choices.length)];
+      pwd += random
   }
   return pwd;
   }
